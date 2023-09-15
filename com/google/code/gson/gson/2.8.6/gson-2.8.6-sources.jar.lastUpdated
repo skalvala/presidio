@@ -1,0 +1,4 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Thu Jul 27 20:03:49 PDT 2023
+https\://nexus-proxy.repo.local.sfdc.net/nexus/content/groups/public/.error=Could not transfer artifact com.google.code.gson\:gson\:jar\:sources\:2.8.6 from/to central (https\://nexus-proxy.repo.local.sfdc.net/nexus/content/groups/public/)\: PKIX path building failed\: sun.security.provider.certpath.SunCertPathBuilderException\: unable to find valid certification path to requested target
+2b1034916f0e5c4186b1d0c9fbd2d927fe2d074d@default-central-https\://nexus-proxy.repo.local.sfdc.net/nexus/content/groups/public/.lastUpdated=1690513429535
