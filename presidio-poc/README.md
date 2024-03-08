@@ -13,8 +13,9 @@ https://resources.docs.salesforce.com/latest/latest/en-us/sfdc/pdf/salesforce_de
     force-wsc-59.0.0-uber.jar
     force-wsc-59.0.0.jar
     ```
-4. Log in to the actual production salesforce org. Go to Setup -> API and click on "Generate Enterprise WSDL". This will open a new tab in your browser, displaying your WSDL file. Save this file to your local machine with the name sfdc.wsdl. Put it in the same folder where you downloaded the WSC .jar files. 
-5. To use the SOAP API with Java, we need to generate .jar stub files for use in our application project. From the folder location where the jar files were saved, run the following command to generate the stub file:
+4. Change the `API_VERSION` variable in the [Constants.java](src/main/java/com/salesforce/impl/Constants.java) file accordingly.
+5. Log in to the actual production salesforce org. Go to Setup -> API and click on "Generate Enterprise WSDL". This will open a new tab in your browser, displaying your WSDL file. Save this file to your local machine with the name sfdc.wsdl. Put it in the same folder where you downloaded the WSC .jar files. 
+6. To use the SOAP API with Java, we need to generate .jar stub files for use in our application project. From the folder location where the jar files were saved, run the following command to generate the stub file:
    ```
    java –classpath force-wsc-59.0.0-uber.jar com.sforce.ws.tools.wsdlc sfdc.wsdl sfdc_stub.jar
    ```
@@ -35,9 +36,9 @@ https://resources.docs.salesforce.com/latest/latest/en-us/sfdc/pdf/salesforce_de
    sfdc-11.0.19-zulu11.64.20-sa (x86_64) "Azul Systems, Inc." - "Zulu 11" /Library/Java/JavaVirtualMachines/sfdc-openjdk_11.0.19_11.64.20.jdk/Contents/Home/Library/Java/JavaVirtualMachines/sfdc-openjdk_11.0.19_11.64.20.jdk/Contents/Home
    ```
    Doing echo $JAVA_HOME does not output anything. The above step creates sfdc_stub.jar. 
-6. In Intellij, go to Files -> Project Structure -> Project Settings -> Libraries and add the 5 jar files onto the classpath.
+7. In Intellij, go to Files -> Project Structure -> Project Settings -> Libraries and add the 5 jar files onto the classpath.
 ![Screenshot 2023-09-15 at 7.38.09 AM.png](..%2F..%2F..%2FDesktop%2FScreenshot%202023-09-15%20at%207.38.09%20AM.png)
-7. You may run a sample java program that queries against a production org (say GS0) as follows in pertinent package structure:
+8. You may run a sample java program that queries against a production org (say GS0) as follows in pertinent package structure:
    ```
    package com.salesforce.drivers.sfdc;
    
